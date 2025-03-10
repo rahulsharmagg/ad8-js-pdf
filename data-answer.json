@@ -1,0 +1,25 @@
+{
+    "testID": "TST-001",
+    "testName": "Test 1",
+    "mesechta": "Berachos",
+    "sugyaID": "sugya-1",
+    "sugya": "sugya 1",
+    "students": ["A23243", "B23243", "C23243", "C23243"],
+    "questions": [
+        {
+            "type": "multipleChoice",
+            "isExtraCredit": false,
+            "answers":3
+        },
+        {
+            "type": "multipleChoice",
+            "isExtraCredit": false,
+            "answers":5
+        },
+        {
+            "type": "multipleChoice",
+            "isExtraCredit": true,
+            "answers":4
+        }
+    ]
+}
