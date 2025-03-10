@@ -3,28 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>תמיכה בעברית</title>
+    <title><%= title %></title>
     <style>
         body {
             direction: rtl;
             text-align: right;
             font-family: "Arial", "Tahoma", sans-serif;
-            font-size: 20px;
+            font-size: 11px;
             padding: 20px;
         }
-        .content {
-            border: 1px solid #000;
-            padding: 15px;
-            margin: 10px;
+        
+        .content{
+            width: 100%;
         }
+        .textbox{
+            background: #dcddde;
+            font-weight: bold;
+            padding: 10px;
+            border: 1px solid #000000;
+            border-radius: 10px;
+            width: 50%;
+            margin: auto;
+            text-align: center;
+        }
+        .textbox2{
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: inline-block;
+            border-top: 1px solid #000000;
+            border-bottom: 1px solid #000000;
+        }
+
+        .questions{
+            font-size: 18px;
+        }
+
+        .type-text{
+            font-weight: bold;
+            font-style: italic;
+        }
+
     </style>
 </head>
 <body>
     <div class="content">
-        <h1>שאלון PDF</h1>
-        <p>זהו דוגמה של PDF שנוצר באמצעות Puppeteer.</p>
-        <p>הכנס כאן תוכן דינמי נוסף לפי הצורך.</p>
-        <!-- Add more dynamic content as needed -->
+        <div class="textbox">
+            (לב.) רבי יהודה אומר:<br><br>
+            תניא רבי יהודה אומר משום רבי טרפון כפות תמרים כפות אם היה פרוד יכפתנו<br><br>
+            אמר ליה רבינא לרב אשי ממאי דהאי כפות תמרים דלולבא הוא אימא חרותא בעינא כפות וליכא ואימא אופתא כפות מכלל דאיכא פרוד והאי כפות ועומד לעולם ואימא כופרא אמר אביי דרכיה דרכי נעם וכל נתיבתיה שלום כתיב אמר ליה רבא תוספאה לרבינא ואימא תרתי כפי דתמרי כפת<br><br>
+            כתיב ואימא חדא לההוא כף קרי ליה:
+        </div>
+        <br><br>
+        <div class="textbox2">
+            בחינה רובד א
+        </div>
+        <br><br>
+        <div class="questions">
+            <% var questionNo = 1; %>
+            <% embed.blocks.forEach(function (element, index) { %>
+                <% if (element.type === 'multipleChoiceQuestion') { %>
+                    <p class="type-question"><%= questionNo %>. <%= element.question %></p>
+                    <ol>
+                        <% element.answers.forEach(function (answer) { %>
+                            <li><%= answer %></li>
+                        <% }); %>
+                    </ol>
+                    <% questionNo++; %>
+                <% } %>
+                // <% if (element.type === 'text') { %>
+                //     <p class="type-text"><%= element.content %></p>
+                // <% } %>
+            <% }); %>
+        </div>
+
     </div>
 </body>
 </html>

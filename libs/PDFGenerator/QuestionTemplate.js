@@ -32,28 +32,24 @@ class QuestionTemplate {
             texts: ['בעוזהי"ת', 'סוכה • לולב הגזול', 'בחינה', 'סוגיא ז']
         });
 
-        const footerTemplate = `
-            <div style="font-size: 10px; text-align: center; width: 100%;">
-                <span>Footer Content</span>
-            </div>
-        `;
+        const footerTemplate = ejs.render(footerTemplateContent, {});
 
         const writePath = path.join(__dirname, 'tmp', 'question.pdf');
         console.log(writePath);
         await page.pdf({
-                    path: writePath,
-                    format: 'Letter',
-                    printBackground: true,
-                    margin: {
-                        top: '100px',
-                        bottom: '100px',
-                        left: '67px',
-                        right: '67px',
-                      },
-                      headerTemplate: headerTemplate,
-                      footerTemplate: footerTemplate,
-                      displayHeaderFooter: true,
-                  });
+            path: writePath,
+            format: 'Letter',
+            printBackground: true,
+            margin: {
+                top: '100px',
+                bottom: '100px',
+                left: '30px',
+                right: '30px',
+            },
+            headerTemplate: headerTemplate,
+            footerTemplate: footerTemplate,
+            displayHeaderFooter: true,
+        });
 
         await browser.close();
 

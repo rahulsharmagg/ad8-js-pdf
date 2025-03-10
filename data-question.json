@@ -31,6 +31,118 @@
             "question":"What is the capital of Canada?",
             "answers":["Ottawa", "Toronto", "Vancouver", "Montreal"],
             "lang": "hebrew"
+        },
+        {
+            "type": "multipleChoiceQuestion",
+            "isExtraCredit": true,
+            "question":"What is the capital of Canada?",
+            "answers":["Ottawa", "Toronto", "Vancouver", "Montreal"],
+            "lang": "hebrew"
+        },
+        {
+            "type": "multipleChoiceQuestion",
+            "isExtraCredit": true,
+            "question":"What is the capital of Canada?",
+            "answers":["Ottawa", "Toronto", "Vancouver", "Montreal"],
+            "lang": "hebrew"
+        },
+        {
+            "type": "multipleChoiceQuestion",
+            "isExtraCredit": true,
+            "question":"What is the capital of Canada?",
+            "answers":["Ottawa", "Toronto", "Vancouver", "Montreal"],
+            "lang": "hebrew"
+        },
+        {
+            "type": "multipleChoiceQuestion",
+            "isExtraCredit": true,
+            "question":"What is the capital of Canada?",
+            "answers":["Ottawa", "Toronto", "Vancouver", "Montreal"],
+            "lang": "hebrew"
+        },
+        {
+            "type": "multipleChoiceQuestion",
+            "isExtraCredit": true,
+            "question":"What is the capital of Canada?",
+            "answers":["Ottawa", "Toronto", "Vancouver", "Montreal"],
+            "lang": "hebrew"
+        },
+        {
+            "type": "multipleChoiceQuestion",
+            "isExtraCredit": true,
+            "question":"What is the capital of Canada?",
+            "answers":["Ottawa", "Toronto", "Vancouver", "Montreal"],
+            "lang": "hebrew"
+        },
+        {
+            "type": "multipleChoiceQuestion",
+            "isExtraCredit": true,
+            "question":"What is the capital of Canada?",
+            "answers":["Ottawa", "Toronto", "Vancouver", "Montreal"],
+            "lang": "hebrew"
+        },
+        {
+            "type": "multipleChoiceQuestion",
+            "isExtraCredit": true,
+            "question":"What is the capital of Canada?",
+            "answers":["Ottawa", "Toronto", "Vancouver", "Montreal"],
+            "lang": "hebrew"
+        },
+        {
+            "type": "multipleChoiceQuestion",
+            "isExtraCredit": true,
+            "question":"What is the capital of Canada?",
+            "answers":["Ottawa", "Toronto", "Vancouver", "Montreal"],
+            "lang": "hebrew"
+        },
+        {
+            "type": "multipleChoiceQuestion",
+            "isExtraCredit": true,
+            "question":"What is the capital of Canada?",
+            "answers":["Ottawa", "Toronto", "Vancouver", "Montreal"],
+            "lang": "hebrew"
+        },
+        {
+            "type": "multipleChoiceQuestion",
+            "isExtraCredit": true,
+            "question":"What is the capital of Canada?",
+            "answers":["Ottawa", "Toronto", "Vancouver", "Montreal"],
+            "lang": "hebrew"
+        },
+        {
+            "type": "multipleChoiceQuestion",
+            "isExtraCredit": true,
+            "question":"What is the capital of Canada?",
+            "answers":["Ottawa", "Toronto", "Vancouver", "Montreal"],
+            "lang": "hebrew"
+        },
+        {
+            "type": "multipleChoiceQuestion",
+            "isExtraCredit": true,
+            "question":"What is the capital of Canada?",
+            "answers":["Ottawa", "Toronto", "Vancouver", "Montreal"],
+            "lang": "hebrew"
+        },
+        {
+            "type": "multipleChoiceQuestion",
+            "isExtraCredit": true,
+            "question":"What is the capital of Canada?",
+            "answers":["Ottawa", "Toronto", "Vancouver", "Montreal"],
+            "lang": "hebrew"
+        },
+        {
+            "type": "multipleChoiceQuestion",
+            "isExtraCredit": true,
+            "question":"What is the capital of Canada?",
+            "answers":["Ottawa", "Toronto", "Vancouver", "Montreal"],
+            "lang": "hebrew"
+        },
+        {
+            "type": "multipleChoiceQuestion",
+            "isExtraCredit": true,
+            "question":"What is the capital of Canada?",
+            "answers":["Ottawa", "Toronto", "Vancouver", "Montreal"],
+            "lang": "hebrew"
         }
     ]
 }
