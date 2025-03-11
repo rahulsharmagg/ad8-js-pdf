@@ -5,7 +5,7 @@
 Clone this repository
 
 ```bash
-git clone <<REPOURL>>
+git clone https://github.com/rahulsharmagg/ad8-js-pdf
 ```
 
 Install the required package
