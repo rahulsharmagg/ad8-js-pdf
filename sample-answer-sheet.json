@@ -1,0 +1,102 @@
+{
+    "testID": "TST-001",
+    "testName": "מבחן 1",
+    "mesechta": "ברכות",
+    "sugyaID": "sugya-1",
+    "sugya": "סוגיה 1",
+    "students": [
+        {
+            "studentID": "STU-001",
+            "studentName": "שרה כהן"
+        },
+        {
+            "studentID": "STU-002",
+            "studentName": "שרה לוי"
+        },
+        {
+            "studentID": "STU-003",
+            "studentName": "דוד פרידמן"
+        },
+        {
+            "studentID": "STU-004",
+            "studentName": "דוד רוזנברג"
+        }
+    ],
+    "questions": [
+        {
+            "type": "multipleChoice",
+            "isExtraCredit": false,
+            "answers": 3
+        },
+        {
+            "type": "multipleChoice",
+            "isExtraCredit": false,
+            "answers": 5
+        },
+        {
+            "type": "multipleChoice",
+            "isExtraCredit": true,
+            "answers": 4
+        },
+        {
+            "type": "multipleChoice",
+            "isExtraCredit": false,
+            "answers": 3
+        },
+        {
+            "type": "multipleChoice",
+            "isExtraCredit": true,
+            "answers": 4
+        },
+        {
+            "type": "multipleChoice",
+            "isExtraCredit": false,
+            "answers": 3
+        },
+        {
+            "type": "multipleChoice",
+            "isExtraCredit": false,
+            "answers": 5
+        },
+        {
+            "type": "multipleChoice",
+            "isExtraCredit": true,
+            "answers": 4
+        },
+        {
+            "type": "multipleChoice",
+            "isExtraCredit": false,
+            "answers": 3
+        },
+        {
+            "type": "multipleChoice",
+            "isExtraCredit": true,
+            "answers": 4
+        },
+        {
+            "type": "multipleChoice",
+            "isExtraCredit": false,
+            "answers": 3
+        },
+        {
+            "type": "multipleChoice",
+            "isExtraCredit": false,
+            "answers": 5
+        },
+        {
+            "type": "multipleChoice",
+            "isExtraCredit": true,
+            "answers": 5
+        },
+        {
+            "type": "multipleChoice",
+            "isExtraCredit": false,
+            "answers": 3
+        },
+        {
+            "type": "multipleChoice",
+            "isExtraCredit": true,
+            "answers": 5
+        }
+    ]
+}

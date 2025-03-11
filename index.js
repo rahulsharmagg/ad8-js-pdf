@@ -1,17 +1,26 @@
 const express = require('express');
 const fs = require('fs').promises;
 const path = require('node:path');
-// const questionJSON = require('./data-question.json');
-const answerJSON = require('./data-answer.json');
+const ejs = require('ejs');
 
-const QuestionPDF = require('./libs/PDFGenerator/QuestionPDF');
+// const questionJSON = require('./data-question.json');
+// const answerJSON = require('./data-answer.json');
+// const QuestionPDF = require('./libs/PDFGenerator/QuestionPDF');
+// const AnswerPDF = require('./libs/PDFGenerator/AnswerPDF');
+
 const QuestionTemplate = require('./libs/PDFGenerator/QuestionTemplate');
+const AnswerTemplate = require('./libs/PDFGenerator/AnswerTemplate');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+app.set('views', path.join(__dirname, '/views'))
+app.set('view engine', 'ejs')
+
+app.use("/fonts", express.static(path.join(__dirname, "public/fonts")));
+
 app.get('/', (req, res, next) => {
-	return res.send('<html><body><a href="/pdf/question">PDF- Question</a><br><a href="/pdf/answer">PDF- Answer</a></body></html>');
+	return res.render('index');
 });
 
 app.get('/test/question', (req, res, next) => {
@@ -40,12 +49,13 @@ app.get('/test/answer', (req, res, next) => {
 	adoc.generate(res);
 })
 
-app.get('/pdf', async (req, res) => {
+app.get('/pdf/question', async (req, res) => {
 	let embedData = '';
 
 	// Import the question json file
 	try {
-		const filePath = path.join(__dirname, 'data-question.json');
+		// const filePath = path.join(__dirname, 'data-question.json');
+		const filePath = path.join(__dirname, 'sample-question-sheet.json');
 	    const rawJSON = await fs.readFile(filePath, { encoding: 'utf-8'});
 	    embedData = JSON.parse(rawJSON);
 	} catch (err) {
@@ -56,6 +66,45 @@ app.get('/pdf', async (req, res) => {
     const myquestionTemp = new QuestionTemplate();
     const data = {
     	title: embedData.testID,
+    	embed: embedData
+    };
+
+    try {
+        // Generate the PDF and get the buffer
+    	const pdfBuffer = await myquestionTemp.createPDF(data);
+
+        // Set headers for PDF response
+    	res.set({
+    		'Content-Type': 'application/pdf',
+    		'Content-Disposition': 'inline; filename="generated.pdf"',
+    		'Content-Length': pdfBuffer.length,
+    	});
+
+        // Send the PDF buffer
+    	res.send(pdfBuffer);
+    } catch (error) {
+    	console.error('Error generating PDF:', error);
+    	res.status(500).send('Error generating PDF');
+    }
+})
+
+app.get('/pdf/answer', async (req, res) => {
+	let embedData = '';
+
+	// Import the question json file
+	try {
+		const filePath = path.join(__dirname, 'sample-answer-sheet.json');
+		// const filePath = path.join(__dirname, 'data-answer.json');
+	    const rawJSON = await fs.readFile(filePath, { encoding: 'utf-8'});
+	    embedData = JSON.parse(rawJSON);
+	} catch (err) {
+		console.error('Error reading JSON file:', err);
+		return res.status(500).json({ error: 'Failed to load data' });
+	}
+
+    const myquestionTemp = new AnswerTemplate();
+    const data = {
+    	title: embedData.testID+ '-' + embedData.testName,
     	embed: embedData
     };
 

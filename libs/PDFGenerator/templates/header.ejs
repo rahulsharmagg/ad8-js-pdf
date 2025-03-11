@@ -1,3 +1,15 @@
+<style type="text/css">
+  @font-face {
+    font-family: 'FbCarizma';
+    src: url('/fonts/fb_CarizmaBold.ttf') format('truetype');
+    font-weight: 700;
+  }
+  @font-face {
+    font-family: 'FbCarizma';
+    src: url('/fonts/fb_CarizmaMedium.ttf') format('truetype');
+    font-weight: 500;
+  }
+</style>
 <div class="header" style="width:100%;text-align:center;">
   <p style="width:100%;text-align:center;font-size:12px;"><%= texts[0] %></p>
   <?xml version="1.0" encoding="UTF-8"?>
@@ -8,8 +20,8 @@
         <path fill="#231f20" d="m426.73,21.91L433.5,0h96.37l-4.7,15.21c-1.14,3.68-5.22,6.7-9.08,6.7h-89.35Z"/>
         <path fill="#c7c8ca" d="m185.31,21.91L178.54,0H0l4.7,15.21c1.14,3.68,5.22,6.7,9.08,6.7h171.53Z"/>
         <path fill="#231f20" d="m344.15,0l-6.87,22.22c-1.14,3.68-5.22,6.7-9.08,6.7h-130.68c-3.85,0-7.94-3.01-9.08-6.7l-6.87-22.22h162.57Z"/>
-        <text x="30" y="15" style="font-size:12px;" fill="#000000"><%= texts[1] %></text>
-        <text x="45%" y="18" style="font-size:20px;font-weight:bold;" fill="#FFFFFF"><%= texts[2] %></text>
+        <text x="30" y="15" style="font-size:12px;" font-family="FbAdamaBook" fill="#000000"><%= texts[1] %></text>
+        <text x="45%" y="18" font-family="FbCarizma" style="font-size:20px;font-weight:bold;" fill="#FFFFFF"><%= texts[2] %></text>
         <text x="70%" y="15" style="font-size:12px;" fill="#000000"><%= texts[3] %></text>
       </g>
     </g>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
     <style>
+        <%- include('font.ejs'); %>
         body {
             direction: rtl;
             text-align: right;
@@ -16,45 +17,84 @@
         .content{
             width: 100%;
         }
+
+        .decorativetext{
+            text-align: center;
+        }
+
         .textbox{
             background: #dcddde;
             font-weight: bold;
             padding: 10px;
             border: 1px solid #000000;
             border-radius: 10px;
-            width: 50%;
+            width: 70%;
             margin: auto;
             text-align: center;
+            font-family: 'FbAdamaBook';
+            font-size: 16px;
+            line-height: 1.1;
+            font-weight: 300;
         }
         .textbox2{
-            text-align: center;
-            font-size: 20px;
-            font-weight: bold;
-            position: absolute;
             left: 50%;
-            transform: translateX(-50%);
+            font-size: 20px;
+            padding: 0 20px;
+            font-weight: bold;
+            font-family: 'FbAdamaBook';
+            position: absolute;
+            text-align: center;
             display: inline-block;
+            transform: translateX(-50%);
             border-top: 1px solid #000000;
             border-bottom: 1px solid #000000;
         }
 
         .questions{
             font-size: 18px;
+            list-style-type: hebrew;
+            font-family: 'FbAdamaBook';
+        }
+
+        .questions > li::marker{
+            font-size: 26px;
+            font-weight: bold;
         }
 
         .type-text{
             font-weight: bold;
             font-style: italic;
         }
+        .type-question::before{
+            content: "";
+            display: inline-block;
+            width: 20px;
+            margin: 0 10px;
+            border-bottom: 1px solid #000000;
+        }
+        .opt-list{
+            text-indent: 10px;
+        }
+        .opt-list > li::marker{
+            font-weight: bold;
+        }
 
     </style>
 </head>
 <body>
     <div class="content">
+        <div class="decorativetext">
+            <img src="<%= svg.glyph %>" height="30" style="transform: translateY(-10px);">
+            <svg width="200" height="50"  viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
+                <text x="50%" y="50%" font-family="Arial" font-size="48" fill="none" stroke="black" font-weight="bold" stroke-width="1" text-anchor="middle" alignment-baseline="middle">סוגיא ז</text>
+            </svg>
+            <img src="<%= svg.glyph %>" height="30" style="transform: rotateY(180deg) translateY(-10px);">
+        </div>
+        <br><br>
         <div class="textbox">
             (לב.) רבי יהודה אומר:<br><br>
             תניא רבי יהודה אומר משום רבי טרפון כפות תמרים כפות אם היה פרוד יכפתנו<br><br>
-            אמר ליה רבינא לרב אשי ממאי דהאי כפות תמרים דלולבא הוא אימא חרותא בעינא כפות וליכא ואימא אופתא כפות מכלל דאיכא פרוד והאי כפות ועומד לעולם ואימא כופרא אמר אביי דרכיה דרכי נעם וכל נתיבתיה שלום כתיב אמר ליה רבא תוספאה לרבינא ואימא תרתי כפי דתמרי כפת<br><br>
+            אמר ליה רבינא לרב אשי ממאי דהאי כפות תמרים דלולבא הוא אימא חרותא בעינא כפות וליכא ואימא אופתא כפות מכלל דאיכא פרוד והאי כפות ועומד לעולם ואימא כופרא אמר אביי דרכיה דרכי נעם וכל נתיבתיה שלום כתיב אמר ליה רבא תוספאה לרבינא ואימא תרתי כפי דתמרי כפת<br>
             כתיב ואימא חדא לההוא כף קרי ליה:
         </div>
         <br><br>
@@ -62,23 +102,22 @@
             בחינה רובד א
         </div>
         <br><br>
-        <div class="questions">
+        <ol class="questions">
             <% var questionNo = 1; %>
             <% embed.blocks.forEach(function (element, index) { %>
                 <% if (element.type === 'multipleChoiceQuestion') { %>
-                    <p class="type-question"><%= questionNo %>. <%= element.question %></p>
-                    <ol>
+                    <li style="page-break-inside: avoid;">
+                    <p class="type-question"><%= element.question %></p>
+                    <ol class="opt-list">
                         <% element.answers.forEach(function (answer) { %>
                             <li><%= answer %></li>
                         <% }); %>
                     </ol>
+                    </li>
                     <% questionNo++; %>
                 <% } %>
-                // <% if (element.type === 'text') { %>
-                //     <p class="type-text"><%= element.content %></p>
-                // <% } %>
             <% }); %>
-        </div>
+        </ol>
 
     </div>
 </body>

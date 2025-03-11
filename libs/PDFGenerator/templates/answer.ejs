@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <style>
+        <%- include('font.ejs'); %>
+        body {
+            direction: rtl;
+            text-align: right;
+            font-family: "Arial", "Tahoma", sans-serif;
+            font-size: 11px;
+            padding: 0 20px;
+        }
+        
+        .content{
+            display: flex;
+            width: 100%;
+            gap: 15px;
+        }
+
+        .decorativetext{
+            text-align: center;
+        }
+
+        .textbox{
+            background: #dcddde;
+            font-weight: bold;
+            padding: 10px;
+            border: 1px solid #000000;
+            border-radius: 10px;
+            width: 50%;
+            margin: auto;
+            text-align: center;
+        }
+        .textbox2{
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: inline-block;
+            border-top: 1px solid #000000;
+            border-bottom: 1px solid #000000;
+        }
+
+        .questions{
+            font-size: 18px;
+        }
+
+        .type-text{
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        .leftcontents{
+            width: 200px;
+            display: flex;
+            gap: 15px;
+            flex-direction: column;
+            height: 610pt;
+            text-align: center;
+        }
+
+        .rightcontents{
+            flex: 1;
+        }
+
+        .box1, .box2{
+            display: block;
+            width: 180px;
+            height: 260px;
+            border-radius: 16px;
+            border: 2px dashed #c0c0c4;
+            padding: 0 10px;
+            background: #ececee;
+        }
+
+        .box2{
+            flex: 1;
+        }
+
+        .breakpage{
+            page-break-before: always;
+        }
+        .ts-0{
+            font-size: 14px;
+        }
+        .ts-1{
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .ts-2{
+            font-size: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .ts-3{
+            font-size: 24px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .li-0{
+            margin-bottom:6px;
+            text-align:right;
+        }
+
+        /* Right Section */
+        .options{
+            display: flex;
+            gap: 20px;
+        }
+
+        .right-option{
+            flex: 1;
+        }
+        .left-option{
+            width: 40%;
+        }
+
+        .option-list li{
+            margin-bottom: 16px;
+            list-style-position: outside;
+            line-height: 24px;
+        }
+
+        .option-list li::marker{
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 0.75;
+            color: #231f20;
+            font-family: 'AdobeHebrew';
+        }
+
+        .grouped-circles,
+        .grouped-numbers
+        {
+            display: flex;
+            gap: 8px;
+        }
+        .grouped-numbers span{
+            width: 24px;
+            height: 20px;
+            display: block;
+            text-align: center;
+            font-size: 12px;
+        }
+        .grouped-circles img{
+            height: 24px;
+            width: 24px;
+            transform: translateY(5px);
+        }
+    </style>
+</head>
+<body>
+    <% embed.students.forEach((student, index) => { %>
+        <div class="content">
+            <%  
+                const { qrCode, studentName, studentID } = student;
+            %>
+            <div class="rightcontents">
+                <div class="decorativetext">
+                    <img src="<%= svg.glyph %>" height="30" style="transform: translateY(-10px);">
+                    <svg width="200" height="50"  viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
+                        <text x="50%" y="50%" font-family="Arial" font-size="48" fill="none" stroke="black" font-weight="bold" stroke-width="1" text-anchor="middle" alignment-baseline="middle">סוגיא א</text>
+                    </svg>
+                    <img src="<%= svg.glyph %>" height="30" style="transform: rotateY(180deg) translateY(-10px);">
+                </div>
+                <br>
+                <ol class="options" style="list-style-type: hebrew;">
+                    <div class="right-option">
+                        <div class="option-list">
+                            <div class="grouped-numbers">
+                                <span>1</span>
+                                <span>2</span>
+                                <span>3</span>
+                                <span>4</span>
+                                <span>5</span>
+                            </div>
+                            <%
+                                for(let i = 0; i < 18; i++){
+                            %>
+                            <li>
+                                <div class="grouped-circles">
+                                    <img src="<%= svg.circle %>"> 
+                                    <img src="<%= svg.circle %>"> 
+                                    <img src="<%= svg.circle %>"> 
+                                    <img src="<%= svg.circle %>"> 
+                                    <img src="<%= svg.circle %>"> 
+                                </div>
+                            </li>
+                            <%
+                                }
+                            %>
+                        </div>                        
+                    </div>
+                    <div class="left-option">
+                        <div class="option-list">
+                            <div class="grouped-numbers">
+                                <span>1</span>
+                                <span>2</span>
+                                <span>3</span>
+                                <span>4</span>
+                                <span>5</span>
+                            </div>
+                            <%
+                                for(let i = 0; i < 18; i++){
+                            %>
+                            <li>
+                                <div class="grouped-circles">
+                                    <img src="<%= svg.circle %>"> 
+                                    <img src="<%= svg.circle %>"> 
+                                    <img src="<%= svg.circle %>"> 
+                                    <img src="<%= svg.circle %>"> 
+                                    <img src="<%= svg.circle %>"> 
+                                </div>
+                            </li>
+                            <%
+                                }
+
+                            %>
+                        </div>
+                    </div>
+                </ol>
+            </div>
+            <div class="leftcontents">
+                <div class="box1">
+                    <br>
+                    <span class="ts-1">שם התלמיד:</span><br><br>
+                    <span class="ts-3"><%= studentName %></span><br><br>
+                    <span class="ts-2">פרשת משפטים</span><br>
+                    <span class="ts-0">שנת תשפ"ה לפ"ק</span><br>
+                    <div style="text-align:center;margin-top: 20px;">
+                        <img src="<%= qrCode %>" width="100px" height="100px;"/>
+                    </div>
+                </div>
+                <div class="box2">
+                    <p class="ts-1">אנווייזונגען:</p><br>
+                    <ul style="padding: 0 16px;font-size: 16px;">
+                        <li class="li-0">אנוויזינגען צו פילן אויס א מולטיל-טשויס בלאזן בלאט</li>
+                        <li class="li-0">אנוויזינגען צו פילן אויס א מולטיל-טשויס בלאזן בלאט</li>
+                        <li class="li-0">אנוויזינגען צו פילן אויס א מולטיל-טשויס בלאזן בלאט</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    <% }); %>
+    
+</body>
+</html>

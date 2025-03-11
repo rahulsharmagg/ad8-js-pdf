@@ -1,0 +1,493 @@
+%!Adobe-FontList 1.23
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:AdobeArabic-Regular
+FamilyName:Adobe Arabic
+StyleName:Regular
+FullName:Adobe Arabic Regular
+MenuName:Adobe Arabic
+StyleBits:0
+FamilyNameNative:Adobe Arabic
+StyleNameNative:Regular
+FullNameNative:Adobe Arabic Regular
+WritingScript:Arabic
+OutlineFileName:F:\Recovery\Documents\OHR HAEMES\Jobs\BZ Henig\בחינה\בחינות כל סוגיות לולב הגזול 2024-HERTZ Folder\Document fonts\AdobeArabic-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:299680
+FileModTime:1722888409
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,18,Adobe Arabic
+NameArray:0,Mac,4,Adobe Arabic Regular
+NameArray:0,Win,1,Adobe Arabic
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:AdobeHebrew-Regular
+FamilyName:Adobe Hebrew
+StyleName:Regular
+FullName:Adobe Hebrew Regular
+MenuName:Adobe Hebrew
+StyleBits:0
+FamilyNameNative:Adobe Hebrew
+StyleNameNative:Regular
+FullNameNative:Adobe Hebrew Regular
+WritingScript:Hebrew
+OutlineFileName:F:\Recovery\Documents\OHR HAEMES\Jobs\BZ Henig\בחינה\בחינות כל סוגיות לולב הגזול 2024-HERTZ Folder\Document fonts\AdobeHebrew-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:73124
+FileModTime:1722888409
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,18,Adobe Hebrew
+NameArray:0,Mac,4,Adobe Hebrew Regular
+NameArray:0,Win,1,Adobe Hebrew
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:BAVilna-Regular
+FamilyName:BA Vilna
+StyleName:Regular
+FullName:BA Vilna Regular
+MenuName:BA Vilna Regular
+StyleBits:0
+FamilyNameNative:BA Vilna
+StyleNameNative:Regular
+FullNameNative:BA Vilna Regular
+WritingScript:Hebrew
+OutlineFileName:F:\Recovery\Documents\OHR HAEMES\Jobs\BZ Henig\בחינה\בחינות כל סוגיות לולב הגזול 2024-HERTZ Folder\Document fonts\BA-Vilna-Regular.otf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:99000
+FileModTime:1739379511
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Win,1,BA Vilna Regular
+NameArray:0,Win,16,BA Vilna
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:FbAdamaBook-Bold
+FamilyName:Fb AdamaBook
+StyleName:Bold
+FullName:FbAdamaBook Bold
+MenuName:Fb AdamaBook
+StyleBits:2
+FamilyNameNative:Fb AdamaBook
+StyleNameNative:Bold
+FullNameNative:Fb AdamaBook Bold
+WritingScript:Hebrew
+OutlineFileName:F:\Recovery\Documents\OHR HAEMES\Jobs\BZ Henig\בחינה\בחינות כל סוגיות לולב הגזול 2024-HERTZ Folder\Document fonts\FbAdamaBook-Bold.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:78484
+FileModTime:1567522796
+WeightClass:700
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,FbAdamaBook Bold
+NameArray:0,Win,1,Fb AdamaBook
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:FbAdamaBook-Light
+FamilyName:Fb AdamaBook
+StyleName:Light
+FullName:Fb AdamaBook Light
+MenuName:Fb AdamaBook Light
+StyleBits:0
+FamilyNameNative:Fb AdamaBook
+StyleNameNative:Light
+FullNameNative:Fb AdamaBook Light
+WritingScript:Hebrew
+OutlineFileName:F:\Recovery\Documents\OHR HAEMES\Jobs\BZ Henig\בחינה\בחינות כל סוגיות לולב הגזול 2024-HERTZ Folder\Document fonts\FbAdamaBook-Light.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:79164
+FileModTime:1567522796
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Fb AdamaBook Light
+NameArray:0,Win,1,Fb AdamaBook Light
+NameArray:0,Win,16,Fb AdamaBook
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:FbAdamaBook-Regular
+FamilyName:Fb AdamaBook
+StyleName:Regular
+FullName:Fb AdamaBook
+MenuName:Fb AdamaBook
+StyleBits:0
+FamilyNameNative:Fb AdamaBook
+StyleNameNative:Regular
+FullNameNative:Fb AdamaBook Regular
+WritingScript:Hebrew
+OutlineFileName:F:\Recovery\Documents\OHR HAEMES\Jobs\BZ Henig\בחינה\בחינות כל סוגיות לולב הגזול 2024-HERTZ Folder\Document fonts\FbAdamaBook-Regular.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:77328
+FileModTime:1567522796
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Fb AdamaBook
+NameArray:0,Win,1,Fb AdamaBook
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:FbKtifa-Bold
+FamilyName:FbKtifa
+StyleName:Bold
+FullName:FbKtifa Bold
+MenuName:FbKtifa
+StyleBits:2
+FamilyNameNative:FbKtifa
+StyleNameNative:Bold
+FullNameNative:FbKtifa Bold
+WritingScript:Hebrew
+OutlineFileName:F:\Recovery\Documents\OHR HAEMES\Jobs\BZ Henig\בחינה\בחינות כל סוגיות לולב הגזול 2024-HERTZ Folder\Document fonts\FbKtifa-Bold.otf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:68444
+FileModTime:1309780476
+WeightClass:700
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,FbKtifa Bold
+NameArray:0,Win,1,FbKtifa
+NameArray:0,Win,16,FbKtifa
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:FbKtifa-Regular
+FamilyName:FbKtifa
+StyleName:Regular
+FullName:FbKtifa Regular
+MenuName:FbKtifa
+StyleBits:0
+FamilyNameNative:FbKtifa
+StyleNameNative:Regular
+FullNameNative:FbKtifa Regular
+WritingScript:Hebrew
+OutlineFileName:F:\Recovery\Documents\OHR HAEMES\Jobs\BZ Henig\בחינה\בחינות כל סוגיות לולב הגזול 2024-HERTZ Folder\Document fonts\FbKtifa-Regular.otf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:72464
+FileModTime:1309780690
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,FbKtifa Regular
+NameArray:0,Win,1,FbKtifa
+NameArray:0,Win,16,FbKtifa
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:GillSansMT
+FamilyName:Gill Sans MT
+StyleName:Regular
+FullName:Gill Sans MT
+MenuName:Gill Sans MT
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:F:\Recovery\Documents\OHR HAEMES\Jobs\BZ Henig\בחינה\בחינות כל סוגיות לולב הגזול 2024-HERTZ Folder\Document fonts\GIL_____.TTF
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:67416
+FileModTime:1692734006
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Gill Sans MT
+NameArray:0,Win,1,Gill Sans MT
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MinionPro-Regular
+FamilyName:Minion Pro
+StyleName:Regular
+FullName:Minion Pro
+MenuName:Minion Pro
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:F:\Recovery\Documents\OHR HAEMES\Jobs\BZ Henig\בחינה\בחינות כל סוגיות לולב הגזול 2024-HERTZ Folder\Document fonts\MinionPro-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:218640
+FileModTime:1722888411
+WeightClass:400
+WidthClass:5
+AngleClass:0
+DesignSize:110
+NameArray:0,Mac,4,Minion Pro
+NameArray:0,Win,1,Minion Pro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:PFTVilna-Bold
+FamilyName:PFT_Vilna
+StyleName:Bold
+FullName:PFT_Vilna Bold
+MenuName:PFT_Vilna
+StyleBits:2
+FamilyNameNative:PFT_Vilna
+StyleNameNative:Bold
+FullNameNative:PFT_Vilna Bold
+WritingScript:Hebrew
+OutlineFileName:F:\Recovery\Documents\OHR HAEMES\Jobs\BZ Henig\בחינה\בחינות כל סוגיות לולב הגזול 2024-HERTZ Folder\Document fonts\PFT_VILNA BOLD.TTF
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:270652
+FileModTime:1703865288
+WeightClass:700
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,18,PFT_Vilna Bold
+NameArray:0,Mac,4,PFT_Vilna Bold
+NameArray:0,Win,1,PFT_Vilna
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:PFTVilna
+FamilyName:PFT_Vilna
+StyleName:Regular
+FullName:PFT_Vilna
+MenuName:PFT_Vilna
+StyleBits:0
+FamilyNameNative:PFT_Vilna
+StyleNameNative:Regular
+FullNameNative:PFT_Vilna Regular
+WritingScript:Hebrew
+OutlineFileName:F:\Recovery\Documents\OHR HAEMES\Jobs\BZ Henig\בחינה\בחינות כל סוגיות לולב הגזול 2024-HERTZ Folder\Document fonts\PFT_VILNA.TTF
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:273860
+FileModTime:1703865284
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,18,PFT_Vilna
+NameArray:0,Mac,4,PFT_Vilna
+NameArray:0,Win,1,PFT_Vilna
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Wolf2side
+FamilyName:Wolf 2side
+StyleName:Regular
+FullName:Wolf 2side
+MenuName:Wolf 2side
+StyleBits:0
+FamilyNameNative:Wolf 2side
+StyleNameNative:Regular
+FullNameNative:Wolf 2side Regular
+WritingScript:Hebrew
+OutlineFileName:F:\Recovery\Documents\OHR HAEMES\Jobs\BZ Henig\בחינה\בחינות כל סוגיות לולב הגזול 2024-HERTZ Folder\Document fonts\WOLF2SID.TTF
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:60400
+FileModTime:1117761068
+WeightClass:4
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Wolf 2side
+NameArray:0,Win,1,Wolf 2side
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:ArialMT
+FamilyName:Arial
+StyleName:Regular
+FullName:Arial
+MenuName:Arial
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:F:\Recovery\Documents\OHR HAEMES\Jobs\BZ Henig\בחינה\בחינות כל סוגיות לולב הגזול 2024-HERTZ Folder\Document fonts\arial.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:1045960
+FileModTime:1651897158
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Arial
+NameArray:0,Win,1,Arial
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Calibri
+FamilyName:Calibri
+StyleName:Regular
+FullName:Calibri
+MenuName:Calibri
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:F:\Recovery\Documents\OHR HAEMES\Jobs\BZ Henig\בחינה\בחינות כל סוגיות לולב הגזול 2024-HERTZ Folder\Document fonts\calibri.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:1681220
+FileModTime:1651897158
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Calibri
+NameArray:0,Win,1,Calibri
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Calibri-Bold
+FamilyName:Calibri
+StyleName:Bold
+FullName:Calibri Bold
+MenuName:Calibri
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:F:\Recovery\Documents\OHR HAEMES\Jobs\BZ Henig\בחינה\בחינות כל סוגיות לולב הגזול 2024-HERTZ Folder\Document fonts\calibrib.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:1647428
+FileModTime:1651897158
+WeightClass:700
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Calibri Bold
+NameArray:0,Win,1,Calibri
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Carizma-Bold
+FamilyName:Carizma
+StyleName:Bold
+FullName:Carizma Bold
+MenuName:Carizma
+StyleBits:2
+FamilyNameNative:Carizma
+StyleNameNative:Bold
+FullNameNative:Carizma Bold
+WritingScript:Hebrew
+OutlineFileName:F:\Recovery\Documents\OHR HAEMES\Jobs\BZ Henig\בחינה\בחינות כל סוגיות לולב הגזול 2024-HERTZ Folder\Document fonts\fb_CarizmaBold.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:38972
+FileModTime:1067857948
+WeightClass:700
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Carizma Bold
+NameArray:0,Win,1,Carizma
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:CarizmaMedium
+FamilyName:CarizmaMedium
+StyleName:Regular
+FullName:CarizmaMedium
+MenuName:CarizmaMedium
+StyleBits:0
+FamilyNameNative:CarizmaMedium
+StyleNameNative:Regular
+FullNameNative:CarizmaMedium Regular
+WritingScript:Hebrew
+OutlineFileName:F:\Recovery\Documents\OHR HAEMES\Jobs\BZ Henig\בחינה\בחינות כל סוגיות לולב הגזול 2024-HERTZ Folder\Document fonts\fb_CarizmaMedium.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:39028
+FileModTime:1067857906
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,CarizmaMedium
+NameArray:0,Win,1,CarizmaMedium
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:TimesNewRomanPSMT
+FamilyName:Times New Roman
+StyleName:Regular
+FullName:Times New Roman
+MenuName:Times New Roman
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:F:\Recovery\Documents\OHR HAEMES\Jobs\BZ Henig\בחינה\בחינות כל סוגיות לולב הגזול 2024-HERTZ Folder\Document fonts\times.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:1206884
+FileModTime:1651897159
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Times New Roman
+NameArray:0,Win,1,Times New Roman
+%EndFont
+

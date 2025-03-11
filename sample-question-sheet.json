@@ -1,0 +1,89 @@
+{
+    "testID": "TST-001",
+    "testName": "מבחן 1",
+    "mesechta": "ברכות",
+    "sugya": "סוגיה 1",
+    "sugyaID": "SUG-001",
+    "blocks": [
+        {
+            "type": "text",
+            "content": "זהו דף שאלות לדוגמה. אנא ענה על השאלות הבאות."
+        },
+        {
+            "type": "multipleChoiceQuestion",
+            "isExtraCredit": false,
+            "question": "מהי בירת צרפת?",
+            "answers": ["פריז", "לונדון", "ברלין", "מדריד"]
+        },
+        {
+            "type": "text",
+            "content": "זהו דף שאלות לדוגמה. אנא ענה על השאלות הבאות."
+        },
+        {
+            "type": "multipleChoiceQuestion",
+            "isExtraCredit": false,
+            "question": "מהי בירת ארצות הברית?",
+            "answers": ["וושינגטון די.סי.", "ניו יורק", "לוס אנג'לס", "שיקגו", "סן פרנסיסקו", "מיאמי"]
+        },
+        {
+            "type": "multipleChoiceQuestion",
+            "isExtraCredit": true,
+            "question": "מהי בירת קנדה?",
+            "answers": ["אוטווה", "טורונטו", "ונקובר", "מונטריאול"]
+        },
+        {
+            "type": "multipleChoiceQuestion",
+            "isExtraCredit": false,
+            "question": "מהו ההר הגבוה ביותר בעולם?",
+            "answers": ["אברסט", "קילימנג'רו", "קונקאגואה", "דנאלי"]
+        },
+        {
+            "type": "multipleChoiceQuestion",
+            "isExtraCredit": false,
+            "question": "מהי השפה המדוברת ביותר בעולם?",
+            "answers": ["סינית מנדרינית", "ספרדית", "אנגלית", "הינדית"]
+        },
+        {
+            "type": "multipleChoiceQuestion",
+            "isExtraCredit": false,
+            "question": "מהו הכוכב הקרוב ביותר לשמש?",
+            "answers": ["מרקורי", "ונוס", "מאדים", "יופיטר"]
+        },
+        {
+            "type": "multipleChoiceQuestion",
+            "isExtraCredit": true,
+            "question": "מהי הים הגדול ביותר בעולם?",
+            "answers": ["האוקיינוס השקט", "האוקיינוס האטלנטי", "האוקיינוס ההודי", "הים הצפוני"]
+        },
+        {
+            "type": "multipleChoiceQuestion",
+            "isExtraCredit": false,
+            "question": "מהי המהירות של אור?",
+            "answers": ["300,000 קילומטר לשנייה", "150,000 קילומטר לשנייה", "1,000 קילומטר לשנייה", "500 קילומטר לשנייה"]
+        },
+        {
+            "type": "multipleChoiceQuestion",
+            "isExtraCredit": true,
+            "question": "מהו המינeral הנפוץ ביותר בקרום כדור הארץ?",
+            "answers": ["קוורץ", "פלטינה", "זהב", "ברזל"]
+        },
+        {
+            "type": "multipleChoiceQuestion",
+            "isExtraCredit": false,
+            "question": "מהי התוכנית המפורסמת ביותר של נאס\"א?",
+            "answers": ["אפולו", "מרס רובר", "שאטל", "סקיילאב"]
+        },
+        {
+            "type": "multipleChoiceQuestion",
+            "isExtraCredit": false,
+            "question": "מהו חודשי השנה?",
+            "answers": ["ינואר, פברואר, מרץ", "מרץ, אפריל, מאי", "יולי, אוגוסט, ספטמבר", "נובמבר, דצמבר, ינואר"]
+        },
+        {
+            "type": "multipleChoiceQuestion",
+            "isExtraCredit": true,
+            "question": "מהו המוזיאון המפורסם ביותר בפריז?",
+            "answers": ["לובר", "אורסי", "פומפידו", "ורסאי"]
+        }
+    ]
+}

@@ -12,7 +12,7 @@
         {
             "type": "multipleChoiceQuestion",
             "isExtraCredit": false,
-            "question":"What is the capital of France?",
+            "question":"אויף וועלכע דין אין די משנה גייט די גמרא ארויף",
             "answers":["Paris", "London", "Berlin", "Madrid"]
         },
         {

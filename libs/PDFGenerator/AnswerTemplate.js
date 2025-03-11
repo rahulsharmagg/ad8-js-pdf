@@ -2,9 +2,10 @@ const ejs = require('ejs');
 const fs = require('fs');
 const path = require('path');
 const puppeteer = require('puppeteer');
+const QRCode = require('qrcode');
 const importAsset = require('./ImportAssets');
 
-class QuestionTemplate {
+class AnswerTemplate {
     async createPDF(data) {
         let configLaunch = {
             headless: true,
@@ -16,30 +17,48 @@ class QuestionTemplate {
         // Load the EJS template
         const templatePath = path.join(__dirname, 'templates');
 
-        const questionPath = path.join(templatePath, 'question.ejs');
+        const answerPath = path.join(templatePath, 'answer.ejs');
         const headerPath = path.join(templatePath, 'header.ejs');
         const footerPath = path.join(templatePath, 'footer.ejs');
 
-        const template = fs.readFileSync(questionPath, 'utf-8');
+        const template = fs.readFileSync(answerPath, 'utf-8');
         const headerContent = fs.readFileSync(headerPath, 'utf-8');
         const footerContent = fs.readFileSync(footerPath, 'utf-8');
 
+        // Render the HTML content with dynamic data
+        const dataWithQR = await Promise.all(
+            data.embed.students.map(async (student) => {
+                let qrcodedata = '';
+                let _student = {};
+                if(typeof student === 'string'){
+                    qrcodedata = student;
+                    _student.id = student;
+                }
+                if(typeof student === 'object'){
+                    qrcodedata = student.studentID;
+                    _student = student;
+                }
+
+                const qrCodeDataURL = await QRCode.toDataURL(qrcodedata, { margin: 2 });
+                return { ..._student, qrCode: qrCodeDataURL }; 
+            })
+        );
+        
         const icon = importAsset('pdf-asset-2.svg');
         const glyph = importAsset('pdf-asset-7.svg');
-
-        data.svg = {
-            glyph
-        }
+        const circle = importAsset('pdf-asset-6.svg');
+        
+        data.embed.students = dataWithQR;
+        data.svg = { 
+            circle, glyph
+        };
 
         // Render the HTML content with dynamic data
         const htmlContent = ejs.render(template, data, {
             views: templatePath,
-            filename: questionPath
+            filename: answerPath
         });
-
-        // Set the content and generate the PDF
-        await page.setContent(htmlContent, { waitUntil: 'networkidle0' });
-
+        
         // Define header and footer templates
         const headerTemplate = ejs.render(headerContent, {
             texts: ['בעוזהי"ת', 'סוכה • לולב הגזול', 'בחינה', 'סוגיא ז']
@@ -49,8 +68,10 @@ class QuestionTemplate {
             svg: { icon }
         });
 
-        // Temp write path
-        const writePath = path.join(__dirname, 'tmp', 'question.pdf');
+        // Set the content and generate the PDF
+        await page.setContent(htmlContent, { waitUntil: 'networkidle0' });
+
+        const writePath = path.join(__dirname, 'tmp', 'answer.pdf');
         await page.pdf({
             path: writePath,
             format: 'Letter',
@@ -64,7 +85,6 @@ class QuestionTemplate {
             headerTemplate: headerTemplate,
             footerTemplate: footerTemplate,
             displayHeaderFooter: true,
-            waitForFonts: true,
         });
 
         await browser.close();
@@ -76,4 +96,4 @@ class QuestionTemplate {
     }
 }
 
-module.exports = QuestionTemplate;
+module.exports = AnswerTemplate;
