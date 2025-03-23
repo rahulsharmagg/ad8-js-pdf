@@ -2,26 +2,35 @@ const express = require('express');
 const fs = require('fs').promises;
 const path = require('node:path');
 const ejs = require('ejs');
-
-// const questionJSON = require('./data-question.json');
-// const answerJSON = require('./data-answer.json');
-// const QuestionPDF = require('./libs/PDFGenerator/QuestionPDF');
-// const AnswerPDF = require('./libs/PDFGenerator/AnswerPDF');
+const fileUpload = require('express-fileupload');
 
 const QuestionTemplate = require('./libs/PDFGenerator/QuestionTemplate');
 const AnswerTemplate = require('./libs/PDFGenerator/AnswerTemplate');
+const AnswerUploadHandler = require('./handlers/AnswerUploadHandler');
+const QuestionUploadHandler = require('./handlers/QuestionUploadHandler');
+const CheckFileMiddleware = require('./middlewares/CheckFileMiddleware')
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-
 app.set('views', path.join(__dirname, '/views'))
 app.set('view engine', 'ejs')
 
+app.use(fileUpload());
+app.use(express.urlencoded({ extended: true }));
+app.use("/css", express.static(path.join(__dirname, "public/css")));
 app.use("/fonts", express.static(path.join(__dirname, "public/fonts")));
 
+
 app.get('/', (req, res, next) => {
-	return res.render('index');
+	return res.render('index', { 
+			message: null, 
+			jsonData: null, 
+			error: null 
+	});
 });
+
+app.post('/upload', CheckFileMiddleware, QuestionUploadHandler, AnswerUploadHandler)
+
 
 app.get('/test/question', (req, res, next) => {
 	const qdoc = new QuestionPDF();
@@ -54,8 +63,8 @@ app.get('/pdf/question', async (req, res) => {
 
 	// Import the question json file
 	try {
-		// const filePath = path.join(__dirname, 'data-question.json');
-		const filePath = path.join(__dirname, 'sample-question-sheet.json');
+		// const filePath = path.join(__dirname, 'sample-question-sheet.json');
+		const filePath = path.join(__dirname, 'temp', 'question_sheet.json');
 	    const rawJSON = await fs.readFile(filePath, { encoding: 'utf-8'});
 	    embedData = JSON.parse(rawJSON);
 	} catch (err) {
@@ -93,8 +102,8 @@ app.get('/pdf/answer', async (req, res) => {
 
 	// Import the question json file
 	try {
-		const filePath = path.join(__dirname, 'sample-answer-sheet.json');
-		// const filePath = path.join(__dirname, 'data-answer.json');
+		// const filePath = path.join(__dirname, 'sample-answer-sheet.json');
+		const filePath = path.join(__dirname, 'temp', 'answer_sheet.json');
 	    const rawJSON = await fs.readFile(filePath, { encoding: 'utf-8'});
 	    embedData = JSON.parse(rawJSON);
 	} catch (err) {

@@ -58,7 +58,7 @@
         .leftcontents{
             width: 200px;
             display: flex;
-            gap: 15px;
+            gap: 20px;
             flex-direction: column;
             height: 610pt;
             text-align: center;
@@ -66,6 +66,7 @@
 
         .rightcontents{
             flex: 1;
+            position: relative;
         }
 
         .box1, .box2{
@@ -111,14 +112,51 @@
         /* Right Section */
         .options{
             display: flex;
-            gap: 20px;
+            gap: 40px;
+            box-sizing: border-box;
+            justify-content: space-between;
+            width: 100%;
+            margin: auto;
+            position: relative;
+        }
+
+        .corner{
+            width: 50px;
+            height: 50px;
+            position: absolute;
+        }
+        .corner.top-right{
+            top: -20px;
+            right: -5px;
+            border-top: 5px solid #000000;
+            border-right: 5px solid #000000;
+        }
+        .corner.top-left{
+            top: -20px;
+            left: 0px;
+            border-top: 5px solid #000000;
+            border-left: 5px solid #000000;
+        }
+        .corner.bottom-right{
+            bottom: 0px;
+            right: -5px;
+            border-bottom: 5px solid #000000;
+            border-right: 5px solid #000000;
+        }
+        .corner.bottom-left{
+            bottom: 0px;
+            left: 0px;
+            border-bottom: 5px solid #000000;
+            border-left: 5px solid #000000;
         }
 
         .right-option{
+            box-sizing: border-box;
             flex: 1;
         }
         .left-option{
-            width: 40%;
+            box-sizing: border-box;
+            flex: 1;
         }
 
         .option-list li{
@@ -153,15 +191,30 @@
             width: 24px;
             transform: translateY(5px);
         }
+        .grouped-circles img.max{
+            width: 20px;
+            height: 20px;
+        }
+        .grouped-numbers span.max{
+            width: 20px;
+            height: 20px;
+        }
     </style>
 </head>
 <body>
+    <%
+        const maxOptionCount = Math.max(...embed.questions.map(q => q.answers));
+        const isMax = maxOptionCount > 5;
+        const questionCount = embed.questions.length;
+    %>
     <% embed.students.forEach((student, index) => { %>
         <div class="content">
             <%  
                 const { qrCode, studentName, studentID } = student;
             %>
             <div class="rightcontents">
+                <div class="corner bottom-right"></div>
+                <div class="corner bottom-left"></div>
                 <div class="decorativetext">
                     <img src="<%= svg.glyph %>" height="30" style="transform: translateY(-10px);">
                     <svg width="200" height="50"  viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
@@ -171,28 +224,37 @@
                 </div>
                 <br>
                 <ol class="options" style="list-style-type: hebrew;">
+                    <div class="corner top-right"></div>
+                    <div class="corner top-left"></div>
                     <div class="right-option">
                         <div class="option-list">
                             <div class="grouped-numbers">
-                                <span>1</span>
-                                <span>2</span>
-                                <span>3</span>
-                                <span>4</span>
-                                <span>5</span>
+                                <% for(let n = 1; n <= maxOptionCount; n++){ %>
+                                        <% if(questionCount > 0){ %>
+                                            <span class="<%= isMax ? 'max' : ''  %>"><%= n %></span>
+                                        <% } %>
+                                <% } %>
                             </div>
                             <%
                                 for(let i = 0; i < 18; i++){
+                                    if(embed.questions?.[i]){
                             %>
                             <li>
                                 <div class="grouped-circles">
-                                    <img src="<%= svg.circle %>"> 
-                                    <img src="<%= svg.circle %>"> 
-                                    <img src="<%= svg.circle %>"> 
-                                    <img src="<%= svg.circle %>"> 
-                                    <img src="<%= svg.circle %>"> 
+                                    <%
+                                        let optionCount = 0;
+                                        if(embed.questions?.[i]?.answers){
+                                            optionCount = embed.questions[i].answers;
+                                        }
+                                        const isMax = optionCount > 5;
+                                    %>
+                                    <% for (let j = 0; j < optionCount; j++) { %>
+                                        <img src="<%= svg.circle %>" class="<%= isMax ? 'max' : ''  %>">
+                                    <% } %>
                                 </div>
                             </li>
                             <%
+                                    }
                                 }
                             %>
                         </div>                        
@@ -200,27 +262,30 @@
                     <div class="left-option">
                         <div class="option-list">
                             <div class="grouped-numbers">
-                                <span>1</span>
-                                <span>2</span>
-                                <span>3</span>
-                                <span>4</span>
-                                <span>5</span>
+                                <% for(let n = 1; n <= maxOptionCount; n++){ %>
+                                <% if(questionCount >= 18){ %>
+                                        <span class="<%= isMax ? 'max' : ''  %>"><%= n %></span>
+                                    <% } %>
+                                <% } %>
                             </div>
                             <%
-                                for(let i = 0; i < 18; i++){
+                                for(let i = 18; i < 36; i++){
+                                    if(embed.questions?.[i]){
                             %>
                             <li>
                                 <div class="grouped-circles">
-                                    <img src="<%= svg.circle %>"> 
-                                    <img src="<%= svg.circle %>"> 
-                                    <img src="<%= svg.circle %>"> 
-                                    <img src="<%= svg.circle %>"> 
-                                    <img src="<%= svg.circle %>"> 
+                                    <%
+                                        const optionCount = 5;
+                                        const isMax = optionCount > 5;
+                                    %>
+                                    <% for (let j = 0; j < optionCount; j++) { %>
+                                        <img src="<%= svg.circle %>" class="<%= isMax ? 'max' : ''  %>">
+                                    <% } %>
                                 </div>
                             </li>
                             <%
+                                    }
                                 }
-
                             %>
                         </div>
                     </div>

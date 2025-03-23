@@ -1,0 +1,199 @@
+:root{
+    --font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --color: #292827;
+    --accent: #5ffd8a;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    padding: 20px;
+}
+.container {
+    margin: 0 auto;
+    max-width: clamp(500px, 70%, 70%);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+}
+.home{
+    position: absolute;
+    left: 40px;
+    top: 20px;
+}
+.home svg{
+    width: 32px;
+    color: var(--color);
+}
+.home:hover svg{
+    color: var(--accent);
+}
+
+.title{
+    text-align: center;
+    color: var(--color);
+    font-size: 2.4rem;
+    padding: 0;
+}
+.h-bar{
+    width: 100%;
+    border-bottom: 2px solid var(--color);
+}
+.form-wrapper{
+    padding: 40px;
+}
+.label-title{
+    padding: 0;
+    margin-top: 0;
+    text-align: center;
+    color: var(--color);
+    font-family: var(--font, sans-serif);
+}
+
+.options {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+    justify-content: center;
+}
+
+.options label {
+    cursor: pointer;
+    display: inline-flex;
+}
+
+/* Hide the actual radio inputs */
+.options input[type="radio"] {
+    display: none;
+}
+
+/* Style the span as buttons */
+.options span {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #333;
+    font-family: var(--font, sans-serif);
+    font-size: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for all buttons */
+.options label:hover span {
+    background-color: #e0e0e0;
+}
+
+/* Style for selected radio */
+.options input[type="radio"]:checked + span {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+/* Optional: Add focus style for accessibility */
+.options input[type="radio"]:focus + span {
+    box-shadow: 0 0 0 2px rgba(0,123,255,0.3);
+}
+
+.file{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.file input[type="file"] {
+    margin: auto;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+/* Optional: Improve file input appearance across browsers */
+.file input[type="file"]::-webkit-file-upload-button {
+    padding: 8px 15px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.file input[type="file"].error{
+    border: 1px dashed #e71400;
+    position: relative;
+}
+.file input[type="file"].error::after{
+    content: 'JSON ERROR';
+    display: block;
+    padding: 2px 4px;
+    position: relative;
+    color: white;
+    font-size: 0.75rem;
+    margin-top: 10px;
+    z-index: 1;
+    background-color: #e71400;
+}
+
+/* Style for the upload button */
+.btn {
+    display: flex;
+    margin: 40px 0;
+    justify-content: center;
+}
+
+.btn button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green base color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover effect */
+.btn button[type="submit"]:hover {
+    background-color: #45a049; /* Darker green */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Active/click effect */
+.btn button[type="submit"]:active {
+    transform: translateY(1px);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Optional: Add a subtle animation effect */
+.btn button[type="submit"]::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.btn button[type="submit"]:hover::after {
+    width: 200px;
+    height: 200px;
+}
+
+.response{
+    padding: 40px;
+}
+.response .message{
+    color: var(--color);
+    font-size: 0.75rem;
+    padding: 4px 8px;
+}
+.response .message.error{
+    background: rgba(250, 14, 23, 0.5);
+}
