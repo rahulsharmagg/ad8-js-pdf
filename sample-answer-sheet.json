@@ -97,6 +97,31 @@
             "type": "multipleChoice",
             "isExtraCredit": true,
             "answers": 5
+        },
+        {
+            "type": "multipleChoice",
+            "isExtraCredit": false,
+            "answers": 3
+        },
+        {
+            "type": "multipleChoice",
+            "isExtraCredit": false,
+            "answers": 5
+        },
+        {
+            "type": "multipleChoice",
+            "isExtraCredit": true,
+            "answers": 5
+        },
+        {
+            "type": "multipleChoice",
+            "isExtraCredit": false,
+            "answers": 3
+        },
+        {
+            "type": "multipleChoice",
+            "isExtraCredit": true,
+            "answers": 5
         }
     ]
 }

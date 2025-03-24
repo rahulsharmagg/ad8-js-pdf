@@ -263,7 +263,7 @@
                         <div class="option-list">
                             <div class="grouped-numbers">
                                 <% for(let n = 1; n <= maxOptionCount; n++){ %>
-                                <% if(questionCount >= 18){ %>
+                                    <% if(questionCount >= 18){ %>
                                         <span class="<%= isMax ? 'max' : ''  %>"><%= n %></span>
                                     <% } %>
                                 <% } %>
@@ -275,8 +275,12 @@
                             <li>
                                 <div class="grouped-circles">
                                     <%
-                                        const optionCount = 5;
+                                        let optionCount = 0;
+                                        if(embed.questions?.[i]?.answers){
+                                            optionCount = embed.questions[i].answers;
+                                        }
                                         const isMax = optionCount > 5;
+
                                     %>
                                     <% for (let j = 0; j < optionCount; j++) { %>
                                         <img src="<%= svg.circle %>" class="<%= isMax ? 'max' : ''  %>">
